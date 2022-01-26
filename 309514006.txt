@@ -1,0 +1,13 @@
+Run 309514006.py with command line below:
+※ Images must be in the same folder as 309514006.py ※
+
+1. dots.jpeg
+--s 2 --sigma 1.6 --num_octave 4 --threshold_rel 0.53 --img dots.jpeg
+
+
+2. butterfly.jpeg
+--s 2 --sigma 1.8 --num_octave 4 --threshold_rel 0.9 --img butterfly.jpeg
+
+
+3. dice
+--s 2 --sigma 3.2 --num_octave 3 --threshold_rel 0.4 --img dice.jpeg
