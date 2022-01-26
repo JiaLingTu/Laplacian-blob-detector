@@ -14,15 +14,4 @@ Run main.py file using the following command lines
 ```
 Or you can modify the code `detector = blob_detector(Opt)` to `detector = blob_detector(params)`  
 
-## Structure
-```
-root
-  ├─ img
-  |      ├─ butterfly.jpeg
-  |      ├─ dots.jpeg
-  |      ├─ dice.jpeg
-  |      └─ bonus.jpeg
-  ├─ requirements.txt
-  ├─ main.ipynb
-  └─ main.py 
-```
+> Note: Test image should be in img folder.
