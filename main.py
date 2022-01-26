@@ -6,6 +6,7 @@ Created on Sat Oct  2 17:27:23 2021
 HW1 for NYCU CV2021.
 Deadline: 2021/10/20 23:55
 """
+import os
 import cv2
 import numpy as np
 from scipy import spatial
@@ -162,26 +163,13 @@ if __name__ == '__main__':
     Opt = parser.parse_args()
 
     # Read image
-    img = cv2.imread(Opt.img, 0)
+    img = cv2.imread(os.path.join(r'.\img', Opt.img), 0)
+    # if you don't want execute codes by using command lines, you can set the parameters via variable params
 # params = {
 #     's': 2, 
 #     'sigma' : 1.6,
 #     'num_octave': 4,
 #     'threshold_rel':0.53,
-#     }
-# img = cv2.imread(r'D:\Computer vision course\HW1\img\butterfly.jpeg', 0)
-# params = {
-#     's': 2, 
-#     'sigma' : 1.8,
-#     'num_octave': 4,
-#     'threshold_rel':0.9,
-#     }
-# img = cv2.imread(r'D:\Computer vision course\HW1\img\dice.jpeg', 0)
-# params = {
-#     's': 2, 
-#     'sigma' : 3.2,
-#     'num_octave': 3,
-#     'threshold_rel':0.4,
 #     }
 
 # Detect blobs
@@ -193,26 +181,3 @@ blob_number, blob_plot = detector.detect(img)
 print('Number of blobs:', blob_number)
 cv2.imshow('Figure', blob_plot)
 cv2.waitKey(0)
-
-# Save the image with blobs and show them on the report
-# cv2.imwrite("dice.jpeg", blob_plot)
-
-
-
-
-'''
-For Bonus question, you can time your code using the following code
-
-import time
-from google.colab.patches import cv2_imshow
-
-detector = YOUR_BLOB_DETECTOR
-start = time.time()
-blob_number, blob_plot = detector.detect(img)
-end = time.time()
-print('Number of blobs:', blob_number)
-cv2_imshow(blob_plot)
-print('Execution time:', end - start)
-
-'''
-
