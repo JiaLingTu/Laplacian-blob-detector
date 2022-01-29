@@ -15,3 +15,4 @@ Run main.py file using the following command lines
 Or you can modify the code `detector = blob_detector(Opt)` to `detector = blob_detector(params)`  
 
 > Note: Test image should be in img folder.
+> For details of the meaning of the parsers, please refer to the [Jupyter notebook](./main.ipynb)  
